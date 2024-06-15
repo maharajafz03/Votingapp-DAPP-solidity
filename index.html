@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voteing_Dapp</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <h1>hello</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    candidate
+                </th>
+                <th>
+                    votes
+                </th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ARUN</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>bala</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>yamuna</td>
+                <td>1</td>
+            </tr>
+
+        </tbody>
+    </table>
+    <input type="text" placeholder="show your id" id="candidate"/>
+    <button onclick = vote()>vote</button>
+    <script src="./node_modules/web3/dist/web3.min.js"></script>
+    <script src="./dapp.js"></script>
+</body>
+</html>
