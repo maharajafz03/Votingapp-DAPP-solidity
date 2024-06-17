@@ -1,25 +1,22 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voteing_Dapp</title>
-    <link rel="stylesheet" href="index.css">
-</head>
+    <title>Voting_Dapp</title>
+    <link rel="stylesheet" href="index.css"> -->
+    <!-- Include Polyfill for cancelAnimationFrame -->
+    <!-- <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=cancelAnimationFrame"></script> -->
+<!-- </head>
 <body>
 
-    <h1>hello</h1>
+    <h1>Hello</h1>
 
     <table>
         <thead>
             <tr>
-                <th>
-                    candidate
-                </th>
-                <th>
-                    votes
-                </th>
-                
+                <th>Candidate</th>
+                <th>Votes</th>
             </tr>
         </thead>
         <tbody>
@@ -28,19 +25,91 @@
                 <td>1</td>
             </tr>
             <tr>
-                <td>bala</td>
+                <td>Bala</td>
                 <td>1</td>
             </tr>
             <tr>
-                <td>yamuna</td>
+                <td>Yamuna</td>
                 <td>1</td>
             </tr>
-
         </tbody>
     </table>
-    <input type="text" placeholder="show your id" id="candidate"/>
-    <button onclick = vote()>vote</button>
-    <script src="./node_modules/web3/dist/web3.min.js"></script>
+    
+    <input type="text" placeholder="Enter your ID" id="candidateId"/>
+    <button onclick="vote()">Vote</button> -->
+
+    <!-- Include Web3.js library -->
+    <!-- <script src="./node_modules/web3/dist/web3.min.js"></script>
+    
+    Include your JavaScript file
     <script src="./dapp.js"></script>
+ -->
+    <!-- JavaScript code to interact with MetaMask -->
+    
+<!-- </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting_Dapp</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- Include Polyfill for requestAnimationFrame -->
+    <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=requestAnimationFrame"></script>
+</head>
+<body>
+
+    <h1>Hello</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Candidate</th>
+                <th>Votes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ARUN</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Bala</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Yamuna</td>
+                <td>1</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <input type="text" placeholder="Enter your ID" id="candidateId"/>
+    <button onclick="vote()">Vote</button>
+
+    <!-- Include Web3.js library -->
+    <script src="./node_modules/web3/dist/web3.min.js"></script>
+    
+    <!-- Include your JavaScript file -->
+    <!-- <script src="./dapp.js"></script> -->
+
+    <!-- JavaScript code to interact with MetaMask -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            if (window.ethereum) {
+                ethereum.request({ method: "eth_requestAccounts" })
+                .then((accounts) => {
+                    console.log('Accounts:', accounts);
+                })
+                .catch((error) => {
+                    console.error('Error requesting accounts:', error);
+                });
+            } else {
+                console.error('MetaMask is not installed');
+            }
+        });
+    </script>
 </body>
 </html>
